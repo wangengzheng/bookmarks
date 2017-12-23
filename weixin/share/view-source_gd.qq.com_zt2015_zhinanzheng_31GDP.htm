@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>腾讯大粤网·指南针</title>
+<style>
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video {
+  margin:0;
+  padding:0;
+}
+article,aside,footer,header,hgroup,nav,section,audio,canvas,video,img {display: block;}
+body {
+    font-size: 100%;
+    font-family:Helvetica,STHeiti,Droid Sans Fallback;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+textarea {resize: none;}
+iframe,img {border:0;}
+ul,ol {list-style:none;}
+input,select,textarea {outline: 0;-webkit-user-modify: read-write-plaintext-only;}
+a{text-decoration: none;}
+
+.wrap{padding-bottom:0px}
+.top{height:82px; background:#EFEFEF;}
+.top img{display:block; margin:0 auto}
+.titlebar{height:90px; background:url(http://img1.gtimg.com/gd/pics/hv1/85/91/1716/111606190.png) repeat-x; margin-bottom:10px}
+.titlebar h1{font: bold 35px/60px Microsoft YaHei; color:#284579;text-align: left; padding-left: 3px;margin-top: -10px;font-weight:700;}
+
+.titlebar img {display: inline; margin: 10px 10px 0px; height: 25px;}
+
+#newsbox{margin-bottom:0px}
+#newsbox .sTitle {font-size: 18px;font-family: "Microsoft Yahei";color: #fff;background-color: #666;display: inline-block;padding-left: 10px;padding-right: 10px; margin: 10px;}
+#newsbox  .zhaiyao { color:#393939;border-bottom: solid 1px #eee;padding-bottom: 10px; height: 84px;}
+#newsbox  .zhaiyao p{padding-left:10px; padding-right:10px; line-height:1.5em;margin-bottom: 10px;padding-bottom: 10px;}
+#newsbox a{color: #666;  font-weight: 400; font-style: normal; font-size: 16px;  }
+#newsbox img{ margin-top: 0px;margin-right: 10px;}
+#newsbox .timeline {background: url(http://img1.gtimg.com/gd/pics/hv1/35/210/1727/112351760.png) no-repeat;margin-left: 55px;}
+#newsbox .timeline dl{padding-left: 10px;margin-left: -55px;padding-top: 8px;}
+#newsbox .timeline dt{float:left; color:#9B0000;padding-right: 20px;font-size:14px; margin-top: -3px; width:50px;}
+#newsbox .timeline dd{padding: 10px;color: #666;  font-weight: 400; font-style: normal; font-size: 16px; margin-left: 60px;margin-right: 10px;border: 1px solid #ddd;}
+#newsbox p {padding: 0px 8px;line-height: 1.5em;color: #393939;}
+#newsbox p a {font-size: 1.1em;font-weight: bold;color: #387BC0;}
+
+.font_14_666666_h24{border-bottom: solid 1px #eee;margin-bottom: 10px;}
+
+
+.font_18_9B0000_lh30{font-family:"微软雅黑","黑体"; font-size:18px; margin:0; padding-left:10px; padding-top:0px; padding-bottom:0px; color:#9B0000; height:30px;}
+          .font_18_9B0000_lh30 a:active{color:#9B0000;text-decoration:none;}
+          .font_18_9B0000_lh30 a:visited{color:#9B0000;text-decoration:none;}
+          .font_18_9B0000_lh30 a:link{color:#9B0000;text-decoration:none;}
+          .font_18_9B0000_lh30 a:hover{color:#9B0000; text-decoration:underline;}
+
+
+#livebox{display:none}
+#livebox .pic{width:100%}
+#zb_content {-webkit-overflow-scrolling:touch}
+#zb_content iframe{display:none}
+#zb_content p{line-height:1.5em; color:#393939}
+#zb_content p a{font-size:1.1em; font-weight:bold; color:#387BC0}
+#livebox .pic .btn{height:36px}
+#livebox .pic .btn input{margin-left:30px}
+#livebox .pic .btn .text{display:none}
+#livebox .pic .btn .btn3{width:100%; float:none; text-align:center}
+#livebox .col1{background:none; color:#222; white-space:pre-wrap}
+.zhiboguangdong{height:40px; background:url(http://img1.gtimg.com/gd/pics/hv1/69/48/1716/111595209.png) no-repeat; margin-left: 5px; margin-right: 10px;}
+.zhiboguangdong span {color: #333333;display: block;float: left;padding-left: 142px;padding-top: 15px;font-family: 微软雅黑, serif;font-size: 16px;}
+
+
+#loading{height:60px; background:url(http://mat1.gtimg.com/gd/img/cj/loading.gif) no-repeat center bottom}
+#modBackTop{position:fixed;_position:absolute;z-index:99999;bottom:10px;_bottom:auto;right:10px; opacity:0.4; display:none; border-radius:25px; overflow:hidden}
+#modBackTop .back_top{display:block;width:50px;height:50px;line-height:100;overflow:hidden;background-image:url(http://mat1.gtimg.com/gd/images/iveimage/backtoplink.png);}
+
+</style>
+
+</head>
+
+<body>
+<div class="wrap">
+
+
+<!-- 新闻页面片 -->
+<div id="newsbox">
+<img src="http://mat1.gtimg.com/gd/zznews/2015cy/31GDP.png" width="100%" />
+</div>
+
+
+
+
+
+
+<div class="mod_back_top" id="modBackTop"><a href="javascript:;" class="back_top" title="返回顶部">返回顶部</a></div>
+
+
+<script>
+window.onscroll = function () { 
+	if (document.documentElement.scrollTop + document.body.scrollTop > 150) { 
+		document.getElementById("modBackTop").style.display = "block"; 
+	}else { 
+		document.getElementById("modBackTop").style.display = "none"; 
+	} 
+}
+
+var isMoving = 0
+document.getElementById('modBackTop').addEventListener("touchstart", function(e){
+	isMoving = 0
+});	
+document.getElementById('modBackTop').addEventListener("touchmove", function(e){	 
+	isMoving = 1
+});
+
+var tap;
+if(typeof(window.ontouchstart)=='undefined'){
+	tap = 'click'
+}else{
+	tap = 'touchend'	
+}
+document.getElementById('modBackTop').addEventListener(tap, function(e){
+	if(isMoving==0){
+		document.documentElement.scrollTop = document.body.scrollTop = 0
+	}
+});
+
+window.onload=function(){
+	document.getElementById('zb_content').style.width = "100%"
+	document.getElementById('loading').style.display = "none"
+	document.getElementById('livebox').style.display = "block"
+
+}
+</script>
+<script>
+var shareTitle = '31省份晒经济“成绩单”，广东算老几？';  //标题
+var shareTimeLineTitle =  '一张图看懂广东经济排名';  //朋友圈标题
+var descContent = "广东去年GDP总量全国第一，但去年广东城镇居民人均收入32148元，全国排第五。";	//分享简介
+var imgUrl = 'http://img1.gtimg.com/gd/pics/hv1/29/218/1800/117100619.jpg';	//分享小图 200*200
+var lineLink = window.location.href;
+var appid = '';
+
+function shareFriend() {
+    WeixinJSBridge.invoke('sendAppMessage',{
+                            "appid": appid,
+                            "img_url": imgUrl,
+                            "img_width": "120",
+                            "img_height": "120",
+                            "link": lineLink,
+                            "desc": descContent,
+                            "title": shareTitle
+                            }, function(res) {
+                            _report('send_msg', res.err_msg);
+                            })
+}
+function shareTimeline() {
+    WeixinJSBridge.invoke('shareTimeline',{
+
+                            "img_url": imgUrl,
+                            "img_width": "120",
+                            "img_height": "120",
+                            "link": lineLink,
+                            "desc": descContent,
+                            "title": shareTimeLineTitle
+                            }, function(res) {
+                            _report('timeline', res.err_msg);
+                            });
+}
+function shareWeibo() {
+    WeixinJSBridge.invoke('shareWeibo',{
+                            "content": descContent,
+                            "url": lineLink,
+                            }, function(res) {
+                            _report('weibo', res.err_msg);
+                            });
+}
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+            });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+            });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+            });
+        }, false);
+
+</script>
+
+
+
+<script language="javascript" src="http://pingjs.qq.com/ping.js"></script>
+<script language="javascript">if(typeof(pgvMain) == 'function') {if(window.location.href.substr(window.location.href.length-1, 1) == '/') pvCurUrl = window.location.href.replace('http://gd.qq.com', '') + 'index.htm';pgvMain();}</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=19427310" charset="UTF-8"></script>
+
+</body>
+</html>
+<!--[if !IE]>|xGv00|56d976735a22ded858e3f05a8d582151<![endif]-->

@@ -1,6 +1,6 @@
 ﻿;(function (url, callback) {
 
-    if (wxShareData == null && wxShareData == undefined)
+    if (wxShareData == null || wxShareData == undefined)
     {
         /*
         
